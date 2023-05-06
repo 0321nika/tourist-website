@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Tourist Landing Page" />
+    <meta
+      property="og:description"
+      content="This is a travel company website"
+    />
+    <meta property="og:image" content="./images/assets/Tourism.svg" />
+    <meta
+      property="og:url"
+      content="https://0321nika.github.io/tourism-landing-page"
+    />
+    <meta name="title" content="Tourist Landing Page" />
+    <meta name="description" content="This is a travel company website" />
+    <meta name="image" content="./images/assets/image2.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Tourist Landing Page</title>
+  </head>
+  <body>
+    <!-- ----------header---------- -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="#"><img src="./images/assets/Tourism.svg" alt="logo" /></a>
+          <ul class="lists">
+            <li class="list-item"><a class="active" href="#">HOME</a></li>
+            <li class="list-item"><a href="#">ABOUT US</a></li>
+            <li class="list-item"><a href="#">OUR SERVICES</a></li>
+            <li class="list-item"><a href="#">TOUR PACKAGE</a></li>
+            <li class="list-item">
+              <a href="./users.html" target="_blank">API</a>
+            </li>
+            <div class="closeMenu">
+              <i class="fa-solid fa-x"></i>
+            </div>
+          </ul>
+          <div class="openMenu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ------------------slider----------------- -->
+    <section class="slider">
+      <div class="image-slider first myslide fade">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="caption-container">
+            <div class="caption">
+              <span>From $199/Person</span>
+              <h2>Discover Greece</h2>
+              <p>TRAVEL WITH UNIQUE EXPERIENCE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image-slider second myslide fade">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="caption-container">
+            <div class="caption">
+              <span>From $200/Person</span>
+              <h2>Discover Italy</h2>
+              <p>TRAVEL WITH UNIQUE EXPERIENCE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image-slider third myslide fade">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="caption-container">
+            <div class="caption">
+              <span>From $400/Person</span>
+              <h2>Discover Portugal</h2>
+              <p>TRAVEL WITH UNIQUE EXPERIENCE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-right" onclick="plusSlides(1)">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <div class="arrow-left" onclick="plusSlides(-1)">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+    </section>
+    <!-- ====================hot services================== -->
+    <section class="hot-services-section">
+      <div class="container">
+        <div class="hot-services">
+          <div class="titles-side">
+            <span>Discover</span>
+            <h2>Our Hot Services</h2>
+            <img src="./images/icons/wave.svg" alt="waveIcoN" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
+          </div>
+          <div class="img-container">
+            <div class="img-side">
+              <div id="card-container"></div>
+            </div>
+            <div id="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modal-image" src="" alt="Modal Image" />
+                <h2 id="modal-title">Modal Title</h2>
+                <p id="modal-description">Modal Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===================video Player================= -->
+    <section>
+      <div class="background-img">
+        <div class="background-overlay"></div>
+        <div class="container">
+          <div class="discover">
+            <div class="firstStage">
+              <span>Discover</span>
+              <h2>Watch Our Video Tour</h2>
+              <img src="./images/icons/wave.svg" alt="waveIcon" />
+            </div>
+          </div>
+          <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Atf_Af1q_5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="acchived-links">
+          <div class="acchived-link-items">
+            <img src="./images/icons/star.png" alt="star" />
+            <h3 class="counter" data-target="120859">0</h3>
+            <h5>HAPPY TRAVELLERS</h5>
+          </div>
+          <div class="acchived-link-items">
+            <img src="./images/icons/tour.png" alt="tour" />
+            <h3 class="counter" data-target="2594">0</h3>
+            <h5>SATISFIED TOURS</h5>
+          </div>
+          <div class="acchived-link-items">
+            <img src="./images/icons/globus.png" alt="globus" />
+            <h3 class="counter" data-target="854">0</h3>
+            <h5>DESTINATION</h5>
+          </div>
+          <div class="acchived-link-items">
+            <img src="./images/icons/capa.png" alt="capacity" />
+            <h3 class="counter" data-target="978">0</h3>
+            <h5>HOTELS & RESORTS</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------------populat tour ------------------ -->
+    <section>
+      <div class="container">
+        <div class="popularTour">
+          <div class="headline">
+            <span>WE OFFER</span>
+            <h2>POPULAR TOUR PACKAGE</h2>
+            <img src="./images/icons/wave.svg" alt="waveIcon" />
+          </div>
+          <div class="popular-tour-items">
+            <div class="popular-tour-items-link">
+              <h3>Honeymoon</h3>
+              <img src="./images/assets/tour1.png" alt="" />
+              <h5>$299/person</h5>
+              <h2>Blue Beauty of Greece</h2>
+              <h5>5 Days / 6 Night</h5>
+            </div>
+            <div class="popular-tour-items-link">
+              <h3>Holiday</h3>
+              <img src="./images/assets/tour2.png" alt="" />
+              <h5>$178/person</h5>
+              <h2>Nature of Phuket</h2>
+              <h5>3 Days / 4 Night</h5>
+            </div>
+            <div class="popular-tour-items-link">
+              <h3>Holiday</h3>
+              <img src="./images/assets/tour3.png" alt="" />
+              <h5>$1111/person</h5>
+              <h2>World Tour of Paris</h2>
+              <h5>7 Days / 8 Night</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================= GET OFF ======================= -->
+    <section class="getoff">
+      <div class="getoff_background">
+        <div class="getoff-overlay"></div>
+        <div class="container">
+          <div class="form">
+            <h2>Get 10% Off on Your Next Travel</h2>
+            <p>Maximum doscout 1000$ per person</p>
+            <form>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+              />
+              <button class="submitBtn" type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== happy travels ================= -->
+    <div class="container">
+      <div class="happytravels">
+        <div class="headline">
+          <span>WE OFFER</span>
+          <h2>POPULAR TOUR PACKAGE</h2>
+          <img src="./images/icons/wave.svg" alt="waveIcon" />
+        </div>
+        <div class="happy-travels-items">
+          <div class="happy-travels-items-link">
+            <img src="./images/assets/image1.png" alt="" />
+            <h2>Ribeca Singh</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+          </div>
+          <div class="happy-travels-items-link">
+            <img src="./images/assets/image2.png" alt="" />
+            <h2>Ribeca Singh</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+          </div>
+          <div class="happy-travels-items-link">
+            <img src="./images/assets/image3.png" alt="" />
+            <h2>Ribeca Singh</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
+            <i class="fa-sharp fa-solid fa-quote-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===================plan section ================== -->
+    <section>
+      <div class="plan-background">
+        <div class="container">
+          <div class="plan-section">
+            <h2>Ready to plan your trip?</h2>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================popular country============ -->
+    <section class="popular-country">
+      <div class="container">
+        <div class="headline">
+          <span>DESTINATION</span>
+          <h2>Popular Tourism Countries</h2>
+          <img src="./images/icons/wave.svg" alt="waveIcon" />
+        </div>
+        <div class="popular-tourism-items">
+          <div class="popular-tourism-items-link">
+            <div class="tourism-background">
+              <div class="price">
+                <h3>Italy</h3>
+                <p>$900 - $1900</p>
+              </div>
+              <a class="btn" href="#"
+                ><i class="fa-sharp fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="popular-tourism-items-link">
+            <div class="tourism-background tourism2">
+              <div class="price">
+                <h3>Italy</h3>
+                <p>$900 - $1900</p>
+              </div>
+              <a class="btn" href="#"
+                ><i class="fa-sharp fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="popular-tourism-items-link">
+            <div class="tourism-background tourism3">
+              <div class="price">
+                <h3>Italy</h3>
+                <p>$900 - $1900</p>
+              </div>
+              <a class="btn" href="#"
+                ><i class="fa-sharp fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="popular-tourism-items-link">
+            <div class="tourism-background tourism4">
+              <div class="price">
+                <h3>Italy</h3>
+                <p>$900 - $1900</p>
+              </div>
+              <a class="btn" href="#"
+                ><i class="fa-sharp fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==============map ========================= -->
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.5312722833864!2d44.77004984693636!3d41.70905345535693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447332ce83ce27%3A0x88f10503a3a86e1d!2sIlia%20State%20University!5e0!3m2!1sen!2sge!4v1683047169847!5m2!1sen!2sge"
+        width="1920"
+        height="435"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+    <!-- ============ footer ======================= -->
+    <footer>
+      <div class="container footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Quck Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Company</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Infrastructure</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suport</h4>
+            <ul>
+              <li><a href="#">Get Started</a></li>
+              <li><a href="#">Lorem</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Ipsum </a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Address</h4>
+            <ul>
+              <li><a href="#">14, 1 Elis bridge ST.</a></li>
+              <li><a href="#">auckland 3500, Australia</a></li>
+              <li><a href="#">+1234567890</a></li>
+              <li><a href="#">contactus@demo.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-input">
+          <h4>Subscribe to our newsletter</h4>
+          <form class="footer-form">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">
+              <i class="fa-sharp fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="second-footer">
+        <h3>tourism©All Rights Reserved</h3>
+      </div>
+    </footer>
+    <script src="./js/main.js" controls></script>
+  </body>
+</html>

@@ -1,0 +1,707 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  .container {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 95px;
+  }
+  /* =============header================ */
+  .navbar {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lists {
+    display: flex;
+  }
+  .list-item a {
+    color: #000;
+    margin-left: 57px;
+    transition: 0.3s;
+  }
+  .list-item a:hover {
+    color: #08aeea;
+  }
+  .active {
+    color: #08aeea;
+  }
+  .closeMenu,
+  .openMenu {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 1100px) {
+    .lists {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 2;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      transition: top 1s ease;
+      display: none;
+    }
+    .list-item a {
+      font-size: 40px;
+    }
+    .list-item a:hover {
+      color: #1c2752;
+    }
+    .list-item {
+      padding: 30px 0;
+    }
+    .closeMenu {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #000;
+    }
+    .openMenu {
+      display: block;
+    }
+  }
+  /* ================slider===================== */
+  
+  .image-slider {
+    background-image: url(../images/assets/Clip.png);
+    height: calc(100vh - 65px);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+  }
+  .second {
+    background-image: url(../images/assets/italy.jpg);
+  }
+  .third {
+    background-image: url(../images/assets/portugal.jpg);
+  }
+  .overlay {
+    background: linear-gradient(#24d2fe, #4b54fa);
+    width: 100%;
+    height: calc(100vh - 65px);
+    opacity: 0.2;
+    position: absolute;
+    z-index: 0;
+  }
+  .caption-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 65px);
+  }
+  .caption {
+    text-align: center;
+    z-index: 1;
+  }
+  .caption span {
+    color: #006cd1;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .caption h2 {
+    color: #fff;
+    font-size: 78px;
+    margin: 30px 0 35px;
+  }
+  .caption p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .arrow-left,
+  .arrow-right {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .arrow-left:hover,
+  .arrow-right:hover {
+    background: #000;
+    color: #fff;
+  }
+  .arrow-right {
+    right: 110px;
+  }
+  .arrow-left {
+    left: 110px;
+  }
+  .image-fade {
+    animation: imageFade 0.5s ease-in-out;
+  }
+  @keyframes imageFde {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .container {
+      padding: 0 15px;
+    }
+    .arrow-right {
+      right: 15px;
+    }
+    .arrow-left {
+      left: 15px;
+    }
+  }
+  /* ===================hot services==================== */
+  #modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .card {
+    cursor: pointer;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .hot-services {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+  .titles-side {
+    max-width: 240px;
+    margin-right: 60px;
+  }
+  .titles-side span,
+  .titles-side p {
+    font-size: 16px;
+    color: #8d8d8d;
+  }
+  .titles-side h2 {
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .titles-side img {
+    margin: 2px 0 20px;
+  }
+  #card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 50px;
+  }
+  .img-side-links {
+    max-width: 270px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .card-title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .card-description {
+    margin-top: 10px;
+    color: #8d8d8d;
+  }
+  @media screen and (max-width: 1250px) {
+    .hot-services {
+      display: grid;
+    }
+    .titles-side {
+      margin: auto;
+      margin-bottom: 30px;
+      max-width: 100%;
+      text-align: center;
+    }
+    #card-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+    .img-side-links {
+      max-width: none;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    #card-container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
+    .card {
+      max-width: 400px;
+      width: 100%;
+      margin: auto;
+    }
+  }
+  
+  /* =======================video player======================= */
+  .background-img {
+    background-image: url(../images/assets/background.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
+  .background-overlay {
+    background: #000;
+    height: 500px;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+  }
+  .discover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .firstStage {
+    padding-top: 35px;
+    z-index: 1;
+    color: #fff;
+    width: 90%;
+    text-align: center;
+  
+  }
+  .video {
+    margin: auto;
+    bottom: 0;
+    width: 664px;
+    height: 318px;
+    margin: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (max-width: 700px) {
+    video {
+      width: 100%;
+    }
+  }
+  /* =====================acchived=================== */
+  .acchived-links {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .acchived-link-items {
+    text-align: center;
+  }
+  .acchived-link-items h3 {
+    margin: 20px 0 2px;
+    font-size: 32px;
+  }
+  .acchived-link-items h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  @media screen and (max-width: 700px) {
+    .acchived-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+  }
+  /* ========================popular tour ======================= */
+  .popularTour {
+    margin-top: 65px;
+  }
+  .headline {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .headline span {
+    color: #8d8d8d;
+  }
+  .popular-tour-items {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  .popular-tour-items-link {
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0 31px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .popular-tour-items-link:hover {
+    box-shadow: none;
+  }
+  .popular-tour-items-link img {
+    position: relative;
+    z-index: 0;
+  }
+  .popular-tour-items-link h3 {
+    margin: 10px 0 0 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fed701;
+    padding: 5px;
+  }
+  .popular-tour-items-link h2 {
+    font-size: 18px;
+    color: #006cd1;
+    margin: 10px 0;
+  }
+  .popular-tour-items-link h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  @media screen and (max-width: 1000px) {
+    .popular-tour-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    .popular-tour-items-link img {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .popular-tour-items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 40px;
+    }
+  }
+  /* ================= GET OFF ============= */
+  .getoff_background {
+    background-image: url(../images/assets/surfer.png);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 60px;
+  }
+  .form {
+    width: 90%;
+    margin: auto;
+    padding-top: 140px;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+  }
+  .getoff-overlay {
+    background: linear-gradient(#2af598, #08aeea);
+    width: 100%;
+    opacity: 0.7;
+    height: 400px;
+    z-index: 0;
+    position: absolute;
+  }
+  
+  .form h2 {
+    font-size: 32px;
+    color: #fff;
+  }
+  .form p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  #email {
+    width: 400px;
+    outline: none;
+    padding: 15px 30px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+  }
+  #email::placeholder {
+    color: #fff;
+  }
+  
+  .submitBtn {
+    background: #fff;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 30px;
+    color: #24d2fe;
+    margin-left: 22px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 550px) {
+    form {
+      display: block;
+    }
+    .submitBtn {
+      margin: 20px 0;
+    }
+    #email {
+      width: 250px;
+    }
+  }
+  /* ==============happytravels============================ */
+  .happytravels {
+    margin-top: 60px;
+  }
+  .happy-travels-items {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .happy-travels-items-link {
+    text-align: center;
+    background-color: #f4f4f4;
+    max-width: 370px;
+  }
+  .happy-travels-items-link {
+    padding: 65px 35px;
+  }
+  .happy-travels-items-link h2 {
+    color: #006cd1;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 15px 0 35px;
+  }
+  .happy-travels-items-link i {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 1350px) {
+    .happy-travels-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .happy-travels-items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+    .happy-travels-items-link {
+      max-width: none;
+    }
+  }
+  /* ==========plan section=========== */
+  .plan-background {
+    background-image: url(../images/assets/mountains.png);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .plan-background .container {
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .plan-section {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .plan-section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  .btn {
+    color: #fff;
+    background: linear-gradient(#2af598, #08aeea);
+    padding: 15px 15px;
+    border-radius: 40px;
+  }
+  
+  /* ============== popular tourism countires =============== */
+  .popular-tourism-items {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+  
+  .tourism-background {
+    background-image: url(../images/assets/thailand.png);
+    height: 425px;
+    width: 271px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    color: #fff;
+  }
+  .tourism2 {
+    background-image: url(../images/assets/italy.png);
+  }
+  .tourism3 {
+    background-image: url(../images/assets/indonesia.png);
+  }
+  .tourism4 {
+    background-image: url(../images/assets/singapore.png);
+  }
+  @media screen and (max-width: 1350px) {
+    .popular-tourism-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  @media screen and (max-width: 1060px){
+    .popular-tourism-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    .popular-tourism-items-link{
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: 700px){
+    .popular-tourism-items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+    .popular-tourism-items-link{
+      margin: auto;
+    }
+  }
+  .map iframe{
+    width: 100%;
+  }
+  /* ================footer================================= */
+  footer{
+    background-color: #000;
+  }
+  .footer-col h4{
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    color: #bebdbd;
+    font-weight: 100;
+  }
+  .footer-container{
+    border-bottom: 0.5px solid #707070;
+  }
+  .row{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .second-footer{
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer-input h4{
+    color: #fff;
+    margin-top: 20px;
+  }
+  .footer-form input{
+    width: 280px;
+    padding: 10px;
+    outline: none;
+  }
+  .footer-form button{
+    padding: 10px;
+    background: linear-gradient(#2af598, #08aeea);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  @media screen and (max-width: 1100px){
+    .footer-container{
+      display: block;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .row{
+      margin: auto;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 470px){
+    .row{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+      
+    }
+  }
