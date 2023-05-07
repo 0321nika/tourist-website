@@ -77,7 +77,6 @@ const modalContent = [
 const cardContainer = document.getElementById("card-container");
 
 modalContent.map((content) => {
-
   const card = document.createElement("div");
   card.classList.add("img-side-links");
 
@@ -126,8 +125,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-
-
 //validation
 const form = document.querySelector("form");
 const emailInput = document.querySelector("#email");
@@ -139,29 +136,28 @@ form.addEventListener("submit", (event) => {
   const email = emailInput.value;
   if (regex.test(email)) {
     form.submit();
-    emailInput.classList.add("valid")
+    emailInput.classList.add("valid");
   } else {
     alert("Please enter a  Gmail address.");
-    emailInput.classList.add("notValid")
+    emailInput.classList.add("notValid");
   }
 });
 
 // scroll animation
 
-
-const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 const options = {
   threshold: 1,
-  rootMargin: '0px 0px -100px 0px'
+  rootMargin: "0px 0px -100px 0px",
 };
 
-const observer = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const target = entry.target;
-      const count = +target.getAttribute('data-target');
+      const count = +target.getAttribute("data-target");
       const duration = 2000;
-      const step = Math.floor(count / duration * 16); 
+      const step = Math.floor((count / duration) * 16);
 
       let currentCount = 0;
       const counterAnimation = () => {
@@ -179,6 +175,18 @@ const observer = new IntersectionObserver(function(entries, observer) {
   });
 }, options);
 
-counters.forEach(counter => {
+counters.forEach((counter) => {
   observer.observe(counter);
 });
+
+const backToTop = document.querySelector(".scrollTop");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if (window.pageYOffset > 500) {
+    backToTop.style.display = "block";
+  }else{
+    backToTop.style.display = "none";
+  }
+}
