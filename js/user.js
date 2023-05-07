@@ -1,7 +1,7 @@
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((data) => {
-    const tableBody = document.querySelector("#data-table tbody");
+    const tableBody = document.querySelector("#table-body");
 
     data.forEach((item) => {
       const row = document.createElement("tr");
