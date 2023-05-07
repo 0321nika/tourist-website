@@ -179,6 +179,8 @@ counters.forEach((counter) => {
   observer.observe(counter);
 });
 
+//back to top
+
 const backToTop = document.querySelector(".scrollTop");
 
 window.addEventListener("scroll", scrollFunction);

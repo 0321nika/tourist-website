@@ -1,10 +1,22 @@
-fetch("https://jsonplaceholder.typicode.com/users").then((res) => {
-        return res.json();
-      })
-      .then(data => {
-        data.forEach(user =>{
-            const markup = `<li>${user.name}</li>`
-            document.querySelector("ul").insertAdjacentHTML("beforeend",markup)
-        })
-      })
-      .catch(error => console.log(error))
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => response.json())
+  .then((data) => {
+    const tableBody = document.querySelector("#data-table tbody");
+
+    data.forEach((item) => {
+      const row = document.createElement("tr");
+      const name = document.createElement("td");
+      const email = document.createElement("td");
+      const phone = document.createElement("td");
+
+      name.textContent = item.name;
+      email.textContent = item.email;
+      phone.textContent = item.phone;
+
+      row.appendChild(name);
+      row.appendChild(email);
+      row.appendChild(phone);
+
+      tableBody.appendChild(row);
+    });
+  });
